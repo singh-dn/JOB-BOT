@@ -1,0 +1,4 @@
+role: "devops"
+max_pages: 2
+headless: true
+recent_days: 14

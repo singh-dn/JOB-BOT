@@ -1,0 +1,12 @@
+streamlit
+pandas
+openpyxl
+pyyaml
+selenium
+webdriver-manager
+beautifulsoup4
+requests
+lxml
+pdfplumber
+python-docx
+spacy
