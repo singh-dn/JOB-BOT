@@ -1,205 +1,208 @@
-AutoApply AI – Real-Time Job Scraper + AI Resume Analyzer + Auto Job Apply System
+# **AutoApply AI – Real-Time Job Scraper + AI Resume Analyzer + Auto Job Apply System**
 
-AutoApply AI is an end-to-end job automation system designed to simplify and accelerate the job search and application process for students and freshers.
-The system scrapes real-time job listings, analyzes resumes using AI, ranks jobs based on relevance, and automatically applies to Internshala jobs using Selenium.
+AutoApply AI is a complete **job automation ecosystem** designed for students, freshers, and job seekers who want to speed up their job search and application process. It automates **job scraping**, **AI resume analysis**, **job matching**, and **auto-application** on Internshala using Selenium.
 
-Features
-1. Real-Time Job Scraping
+---
 
-Scrapes job listings from:
+## 🚀 **Features**
 
-Internshala (Selenium)
+### 🔍 **Real-Time Job Scraping**
 
-Naukri.com (Selenium)
+Scrapes fresh job listings from:
 
-Indeed (optional future extension)
+* **Internshala (Selenium)**
+* **Naukri.com (Selenium)**
+* **Indeed** *(future extension)*
 
-Extracted details include:
+Extracted job fields:
 
-Job Title
+* Job Title
+* Company Name
+* Skills Required
+* Salary
+* Posted Date
+* Job Description
+* Job Link
 
-Company Name
+---
 
-Skills
+### 📝 **AI-Powered Resume Parser**
 
-Salary
-
-Posted Date
-
-Job Description
-
-Job Link
-
-2. Resume Parser
-
-Supports PDF and DOCX formats.
+Supports **PDF** and **DOCX** formats.
 
 Extracts:
 
-Skills
+* Skills
+* Experience Keywords
+* Location
+* Contact Details
+* Suggested Job Title
 
-Location
+Additional AI features:
 
-Experience keywords
+* **AI Skill Extraction**
+* **AI Resume Improvement Suggestions**
 
-Contact info
+---
 
-Suggested job title
+### 🤖 **AI Job Matching**
 
-Also includes:
+Each scraped job is matched with the candidate resume using:
 
-AI Skill Extraction
-
-AI Resume Suggestions
-
-3. AI Job Matching
-
-Each job is matched against the candidate’s resume using:
-
-Gemini AI (if API available)
-
-NLP fallback system (token similarity)
+* **Gemini AI** *(if API key available)*
+* **NLP Token Similarity** *(fallback)*
 
 Produces:
 
-AI Match Score (0–100)
+* **AI Match Score (0–100)**
+* **Reason for Score / Match Explanation**
 
-Explanation Reason
+---
 
-4. Dashboard UI (Streamlit)
+### 📊 **Interactive Dashboard (Streamlit)**
 
-Includes:
+The dashboard provides:
 
-Job scraping form
+* Job Scraping Form
+* Resume Upload Section
+* All Jobs Table
+* Matched Jobs Table
+* LinkedIn-style Grid View
+* Expandable Job Details
+* Export Data to Excel
 
-Resume upload section
+---
 
-All jobs table
+### ⚙️ **Auto Apply System (Internshala)**
 
-Matched jobs table
+Two modes are supported:
 
-LinkedIn-style job grid view
+#### **Mode 1 — Fully Automatic**
 
-Expandable job details
+Automatically applies to all relevant job postings.
 
-Excel export for job data
-
-5. Auto Apply System (Internshala)
-
-Two modes:
-
-Mode 1 — Fully Automatic
-
-Automatically applies to all matching jobs.
-
-Mode 2 — Semi-Automatic
+#### **Mode 2 — Semi-Automatic**
 
 User selects desired jobs → Bot applies only to selected ones.
 
 The automation fills:
 
-Candidate details
+* Candidate Details
+* Cover Letter
+* Additional Questions
+* Resume Upload
+* Final Submission
 
-Cover letter
+---
 
-Additional questions
+## 📁 **Project Structure**
 
-Resume upload
-
-Final submission
-
-Project Structure
+```
 AutoApply-AI/
 │
-├── main.py                          # Streamlit dashboard
-├── requirements.txt                 # Dependencies
+├── main.py                   # Streamlit dashboard
+├── requirements.txt          # Dependencies
 │
 ├── scraper/
-│   ├── internshala_realtime.py      # Selenium scraper (Internshala)
-│   ├── naukri_realtime.py           # Selenium scraper (Naukri)
-│   ├── resume_parser.py             # Resume text extraction and AI
-│   ├── utils.py                     # Helper functions (skills, emails, days)
-│   └── selenium_driver.py           # WebDriver manager
+│   ├── internshala_realtime.py   # Internshala Selenium scraper
+│   ├── naukri_realtime.py        # Naukri Selenium scraper
+│   ├── resume_parser.py          # Resume text extraction + AI
+│   ├── utils.py                  # Helper functions
+│   └── selenium_driver.py        # WebDriver manager
 │
 └── README.md
+```
 
-Installation
-1. Clone the Repository
+---
+
+## 🛠️ **Installation & Setup**
+
+### **1️⃣ Clone the Repository**
+
+```bash
 git clone https://github.com/yourusername/AutoApply-AI.git
 cd AutoApply-AI
+```
 
-2. Install Dependencies
+### **2️⃣ Install Dependencies**
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Run the App
+### **3️⃣ Run the Application**
+
+```bash
 streamlit run main.py
+```
 
-Environment Variables (Optional for AI)
+---
 
-To enable Gemini-based AI matching and resume improvement:
+## 🔐 **Environment Variables (Optional for AI)**
 
+To enable Gemini‑based job matching and resume enhancement:
+
+```
 GEMINI_API_KEY=your_api_key_here
+```
 
-Technologies Used
-Frontend
+---
 
-Streamlit (UI)
+## 🧠 **Technologies Used**
 
-Backend
+### **Frontend**
 
-Python
+* Streamlit
 
-Selenium
+### **Backend**
 
-BeautifulSoup4
+* Python
+* Selenium
+* BeautifulSoup4
+* Pandas
+* Regex
 
-Pandas
+### **AI & NLP**
 
-Regular Expressions
+* Google Gemini API
+* Token Similarity (Fallback)
 
-AI
+---
 
-Google Gemini API
+## 🧩 **How It Works**
 
-NLP token similarity (fallback)
+1. User uploads resume → System extracts skills using parser + AI.
+2. User enters job search filters.
+3. Selenium scrapers fetch real-time job data.
+4. AI/NLP matches job descriptions with the resume.
+5. Dashboard displays:
 
-How It Works
+   * All Jobs
+   * Matched Jobs
+   * Grid View
+   * Detailed View
+6. User selects **Auto Apply** mode.
+7. Selenium bot applies automatically on Internshala.
 
-User uploads resume → resume parser extracts skills and suggestions
+---
 
-User enters job search filters
+## 🔮 **Future Enhancements**
 
-Selenium scrapers collect job data in real time
+* Auto Apply for Naukri & Indeed
+* OTP & Captcha Handling
+* Browser Extension for Real-Time Alerts
+* Cloud-Based Automated Scraper
+* Auto Scheduling (Daily Apply System)
 
-Job descriptions are matched to the resume
+---
 
-Dashboard displays:
-
-All scraped jobs
-
-AI-matched jobs
-
-Grid view
-
-Job details
-
-User selects auto-apply mode
-
-Selenium bot applies on Internshala automatically
-
-Future Enhancements
-
-Auto apply for Naukri and Indeed
-
-Captcha and OTP handling
-
-Chrome extension for real-time notifications
-
-Cloud-based automated scraping
-
-Scheduling system for daily auto apply
-
-Contributing
+## 🤝 **Contributing**
 
 Pull requests are welcome.
-For major changes, please open an issue first to discuss the proposed changes.
+For major changes, open an issue first to discuss improvements.
+
+---
+
+## 📄 **License**
+
+This project is open-source under the MIT License.
